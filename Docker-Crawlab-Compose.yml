@@ -58,7 +58,7 @@ services:
   mongo:
     image: mongo:latest
     restart: always
-     volumes:
+    volumes:
        - "/opt/crawlab/mongo/data/db:/data/db"  # make data persistent 持久化
     # ports:
     #   - "27017:27017"  # expose port to host machine 暴露接口到宿主机
@@ -66,7 +66,7 @@ services:
     image: redis:latest
     restart: always
     # command: redis-server --requirepass "password" # set redis password 设置 Redis 密码
-     volumes:
+    volumes:
        - "/opt/crawlab/redis/data:/data"  # make data persistent 持久化
     # ports:
     #   - "6379:6379"  # expose port to host machine 暴露接口到宿主机
